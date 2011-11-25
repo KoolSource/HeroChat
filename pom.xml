@@ -3,43 +3,57 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.koolsource</groupId>
-  <artifactId>HeroChat_Maven</artifactId>
+  <artifactId>HeroChat</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>HeroChat_Maven</name>
-  <url>http://maven.apache.org</url>
+  <name>HeroChat</name>
+  <url>http://koolsource.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <api.version>unknown</api.version>
   </properties>
-
+  
+  <scm>
+    <connection>scm:git:git://github.com/KoolSource/HeroChat.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/KoolSource/HeroChat.git</developerConnection>
+    <url>https://github.com/KoolSource/HeroChat</url>
+  </scm>
+  
+  <distributionManagement>
+    <repository>
+        <id>KoolSource Artifact Repository</id> 
+        <name>KoolSource Artifact Repository-releases</name> 
+        <url>http://ci.koolsource.com:8081/artifactory/ext-local</url>
+    </repository>
+    <snapshotRepository>
+        <id>KoolSource Artifact Repository</id>
+        <name>KoolSource Artifact Repository-snapshots</name>
+        <url>http://ci.koolsource.com:8081/artifactory/ext-local</url>
+    </snapshotRepository>
+</distributionManagement>
+  
   <dependencies>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
+        <groupId>org.bukkit</groupId>
+        <artifactId>bukkit</artifactId>
+        <version>0.0.1-20111125.164434-1</version>
     </dependency>
     <dependency>
-      <groupId>org.bukkit</groupId>
-      <artifactId>bukkit</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
+        <groupId>CraftIRC</groupId>
+        <artifactId>CraftIRC</artifactId>
+        <version>CraftIRC</version>
     </dependency>
     <dependency>
-      <groupId>com.ensifera.animosity</groupId>
-      <artifactId>craftirc</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
+        <groupId>ru.tehkode</groupId>
+        <artifactId>PermissionsEx</artifactId>
+        <version>1.16</version>
     </dependency>
     <dependency>
-      <groupId>ru.tehkode.permissions.bukkit</groupId>
-      <artifactId>PermissionsEx</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>com.onarandombox</groupId>
-      <artifactId>MultiverseCore</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
+        <groupId>com.onarandombox.multiversecore</groupId>
+        <artifactId>Multiverse-Core</artifactId>
+        <version>2.1</version>
     </dependency>
   </dependencies>
 </project>
